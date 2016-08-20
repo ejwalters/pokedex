@@ -9,6 +9,9 @@
         <mutableArray key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
         </mutableArray>
+        <mutableArray key="PokemonSolid.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -28,9 +31,32 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZp-aE-MPv">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb8-Tf-AUq">
+                                        <rect key="frame" x="551" y="25" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="MQ8-x9-ccH"/>
+                                            <constraint firstAttribute="width" constant="41" id="Qjv-Uc-vd7"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ScX-9u-BDK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fag-vS-zeN">
+                                        <rect key="frame" x="185" y="17" width="231" height="39"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="31"/>
+                                        <color key="textColor" red="0.99942735599999999" green="0.99942735599999999" blue="0.99942735599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.86855775523560208" green="0.29983068722513984" blue="0.29404755260850185" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Kb8-Tf-AUq" firstAttribute="top" secondItem="KZp-aE-MPv" secondAttribute="top" constant="25" id="Bem-Aa-fUW"/>
+                                    <constraint firstItem="fag-vS-zeN" firstAttribute="centerY" secondItem="KZp-aE-MPv" secondAttribute="centerY" id="Dl6-Dd-nOS"/>
                                     <constraint firstAttribute="height" constant="74" id="kHc-Cf-eXw"/>
+                                    <constraint firstItem="fag-vS-zeN" firstAttribute="centerX" secondItem="KZp-aE-MPv" secondAttribute="centerX" id="qY2-6r-hy0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kb8-Tf-AUq" secondAttribute="trailing" constant="8" id="xX3-yn-hTe"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j5s-C1-TL9">
@@ -133,5 +159,6 @@
     <resources>
         <image name="297" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
