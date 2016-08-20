@@ -179,16 +179,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-bD-efm">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charizard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cv-WP-b5G">
-                                        <rect key="frame" x="159" y="26" width="282" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="282" id="AdZ-pA-qh5"/>
-                                            <constraint firstAttribute="height" constant="21" id="D6y-Ea-U4d"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                                        <color key="textColor" red="0.99942735599999999" green="0.99942735599999999" blue="0.99942735599999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qp-8g-jF9">
                                         <rect key="frame" x="8" y="36" width="45" height="30"/>
                                         <constraints>
@@ -196,7 +186,20 @@
                                             <constraint firstAttribute="height" constant="30" id="oN0-yQ-AeU"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="Dww-PL-nmv" eventType="touchUpInside" id="3Xf-Qe-nOK"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charizard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cv-WP-b5G">
+                                        <rect key="frame" x="159" y="21.5" width="282" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="282" id="AdZ-pA-qh5"/>
+                                            <constraint firstAttribute="height" constant="30" id="D6y-Ea-U4d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                        <color key="textColor" red="0.99942735599999999" green="0.99942735599999999" blue="0.99942735599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8685577552" green="0.2998306872" blue="0.29404755259999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -360,14 +363,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PAe-2g-7JI">
                                 <rect key="frame" x="20" y="480" width="560" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="142" translatesAutoresizingMaskIntoConstraints="NO" id="OO8-QA-QMW">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="142" translatesAutoresizingMaskIntoConstraints="NO" id="OO8-QA-QMW">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="JDa-Tu-WaZ"/>
                                             <constraint firstAttribute="width" constant="100" id="itu-jh-K6e"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="200" translatesAutoresizingMaskIntoConstraints="NO" id="84q-Pm-7gD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="200" translatesAutoresizingMaskIntoConstraints="NO" id="84q-Pm-7gD">
                                         <rect key="frame" x="280" y="0.0" width="280" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="5fd-1c-xWd"/>
@@ -395,7 +398,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLabel" destination="FBN-E5-myR" id="E2x-Hc-qhg"/>
+                        <outlet property="currentEvoImage" destination="OO8-QA-QMW" id="xXE-Dh-u1y"/>
+                        <outlet property="defenseLabel" destination="eW5-fY-kFx" id="aW2-Wd-9pd"/>
+                        <outlet property="descriptionLabel" destination="GGz-7p-RG7" id="19C-ok-PcJ"/>
+                        <outlet property="evolutionLabel" destination="lgF-kd-mEO" id="rAC-Xb-f1y"/>
+                        <outlet property="heightLabel" destination="K2D-NV-WHy" id="n9H-T8-ccd"/>
+                        <outlet property="mainImage" destination="FyV-9q-WhR" id="FeW-dV-2Td"/>
                         <outlet property="nameLabel" destination="8Cv-WP-b5G" id="tnh-h1-xrD"/>
+                        <outlet property="nextEvoImage" destination="84q-Pm-7gD" id="agn-br-0xd"/>
+                        <outlet property="pokedexLabel" destination="jpH-Vq-e6Z" id="ECu-db-Scb"/>
+                        <outlet property="typeLabel" destination="XwY-dH-hvS" id="uJ2-Z1-Cs3"/>
+                        <outlet property="weightLabel" destination="CpJ-FY-4EZ" id="hHM-as-UhV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNj-ZR-g6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
